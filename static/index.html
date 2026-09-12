@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>腾冲福溪塔酒店管理平台 - 智慧运营工作台</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">塔</div>
+        <div class="brand-text">
+          <h1>心灵复苏 · 福溪塔</h1>
+          <p>腾冲市心灵复苏福溪塔酒店管理有限公司</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <div class="store-tag" id="userTag">🏢 正在加载...</div>
+        <button class="btn-login" id="loginBtn">登录/注册</button>
+      </div>
+    </div>
+  </nav>
+  <!-- 主视觉区 -->
+  <header class="hero">
+    <h2>民宿“超级个体”智慧运营与智能体决策工作台</h2>
+    <p>赋能云南、川渝、西藏、新疆等 30 余家物业与近 1,000 间客房的高效运转</p>
+    <div class="hero-stats">
+      <div class="stat-item">覆盖房源 <span>1,000+</span> 间</div>
+      <div class="stat-item">品牌运营 <span>30+</span> 家</div>
+      <div class="stat-item">专业化 · 标准化 · 精细化</div>
+    </div>
+  </header>
+  <!-- 5 大核心功能矩阵 -->
+  <main class="main-container">
+    <div class="section-title">
+      <span>📌 核心业务矩阵与智能决策系统</span>
+    </div>
+    <div class="modules-grid">
+      <!-- 模块 1 -->
+      <a href="/m1_strategy.html" class="module-card">
+        <span class="module-badge badge-blue">课题一 · 逆周期策略</span>
+        <h3>弱旺季逆周期策略 Agent</h3>
+        <p>面对“旺季不旺”与需求下行，规避恶意低价内卷。通过商圈房态预测，提供“特色体验打包+保价稳销”决策方案。</p>
+        <div class="module-footer">
+          <span>动态定价 / 组合营销</span>
+          <span class="enter-arrow">进入工作台 →</span>
+        </div>
+      </a>
+      <!-- 模块 2 -->
+      <a href="/m2_reputation.html" class="module-card">
+        <span class="module-badge badge-gold">课题二 · 高情商公关</span>
+        <h3>高情商客诉与评价公关 Agent</h3>
+        <p>基于情绪感知大模型。针对 OTA 差评、噪音客诉或退改争议，一键输出符合公司 SOP 的温度安抚与挽回文案。</p>
+        <div class="module-footer">
+          <span>口碑修复 / 情绪化解</span>
+          <span class="enter-arrow">进入工作台 →</span>
+        </div>
+      </a>
+      <!-- 模块 3 -->
+      <a href="/m3_training.html" class="module-card">
+        <span class="module-badge badge-green">人才实训 · 模拟演练</span>
+        <h3>新管家业务实训考核靶场</h3>
+        <p>AI 拟真还原深夜醉酒、换房纠纷等高压刁难场景。管家实战文字对练，系统自动对礼仪、风控与技巧即时打分。</p>
+        <div class="module-footer">
+          <span>拟真对练 / SOP评分</span>
+          <span class="enter-arrow">进入工作台 →</span>
+        </div>
+      </a>
+      <!-- 模块 4 (加分亮点) -->
+      <a href="/m4_room_select.html" class="module-card">
+        <span class="module-badge badge-purple">特色亮点 · 施工避让</span>
+        <h3>智能选房与噪音/交通感知</h3>
+        <p>破解古镇木质古建隔音痛点。基于石板路主干道、周边客栈装修施工源热力图标注，为房客精准分配静音客房。</p>
+        <div class="module-footer">
+          <span>动线分析 / 噪音规避</span>
+          <span class="enter-arrow">进入工作台 →</span>
+        </div>
+      </a>
+      <!-- 模块 5 -->
+      <a href="/m5_ecosystem.html" class="module-card">
+        <span class="module-badge badge-gray">协同生态 · 预留模块</span>
+        <h3>协同生态与集采共享平台</h3>
+        <p>连接各区域民宿业主、职业经理人与本地供应链。支持物资集中采购、布草洗涤集约化共享，增强抗周期韧性。</p>
+        <div class="module-footer">
+          <span>资源共享 / 供应链协同</span>
+          <span class="enter-arrow">进入工作台 →</span>
+        </div>
+      </a>
+    </div>
+  </main>
+  <!-- 登录/注册弹窗 Modal -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <h3>工作台登录认证</h3>
+      <p class="modal-desc">请登录以进入腾冲福溪塔智能决策系统</p>
+      <form onsubmit="handleManualAuth(event)">
+        <div class="form-group">
+          <label>账号 / 手机号</label>
+          <input type="text" id="username" class="form-input" placeholder="输入您的员工或体验账号" required>
+        </div>
+        <div class="form-group">
+          <label>访问密码</label>
+          <input type="password" class="form-input" placeholder="••••••••" value="123456">
+        </div>
+        <button type="submit" class="btn-submit">立即进入工作台</button>
+      </form>
+      <!-- 答辩快捷体验通道 -->
+      <div class="quick-roles">
+        <p>💡 Demo Day 答辩免密极速体验：</p>
+        <div class="role-btns">
+          <button type="button" class="btn-role" onclick="setQuickRole('店长', '和顺旗舰店·张店长')">以 店长 体验</button>
+          <button type="button" class="btn-role" onclick="setQuickRole('管家', '和顺一号院·小李管家')">以 管家 体验</button>
+          <button type="button" class="btn-role" onclick="setQuickRole('投资人', '品牌合伙人·陈先生')">以 投资人 体验</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
